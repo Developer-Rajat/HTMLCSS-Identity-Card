@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding-top: 150px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('assets/background.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.identity_card{
+    width: 45rem;
+    text-align: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 1px 1px 30px black;
+    padding-top: 30px;
+    background-color: rgb(17, 17, 17);
+}
+
+.myLogo{
+    display: inline-block;
+    padding: 8px;
+    background: linear-gradient(130deg, #eeff00, #ff0000);
+    margin: auto;
+    border-radius: 50%;
+    background-size: 200% 200%;
+    animation: border-round-color 3s linear infinite;
+
+}
+
+.myLogo img {
+    display: block;
+    width: 12rem;
+    border-radius: 50%;
+}
+
+.text_desc{
+    font-family: 'Roboto', sans-serif;
+    color: #00f7ff;
+}
+
+.text_desc .heading{
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.text_desc .subtitle{
+    font-weight: medium;
+    font-size: 1.8rem;
+}
+.social_media{
+    margin: 15px 0;
+    border:none;
+}
+
+a{
+    font-size: 40px;
+    padding: 7px 12px;
+    text-decoration: none;
+    color: #00f7ff
+}
+
+a:hover{
+    color: #ff0000;
+}
+
+.contact_button{
+    margin-top: 11px;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 4px;
+    border: 2px solid #00f7ff; 
+    transition: .3s linear;   
+}
+
+.contact_button a{
+    font-size: 2.3rem;
+    color: #00f7ff;
+}
+
+.contact_button a:hover{
+    color: black;
+}
+
+.contact_button:hover{
+    background-color: red;
+    border-color: red;
+    color: blue;
+}
+.card_footer{
+    background:#00f7ff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.social_counters{
+    display: flex;
+    align-items: center;
+}
+.counter{
+    flex: 2;
+    font-size: 2.1rem;
+    font-family: 'Farro', sans-serif;
+}
+.counter span{
+    display:block;
+    font-size: 3.6rem;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes border-round-color {
+    25%{background-position: left bottom;}
+    50%{background-position: right bottom;}
+    75%{background-position: right top;}
+    100%{background-position: left top;}
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 1044px){
+    .identity_card {
+        width: 43rem;
+    }
+    .text_desc .heading {
+        font-size: 3.7rem;
+    }
+    .text_desc .subtitle {
+        font-size: 1.8rem;
+    }
+
+    .card_footer {
+        padding: 5rem 1rem;
+    }
+}
+
+@media screen and (max-width: 492px){
+    .identity_cards {
+        width: 38rem;
+    }
+    .text_desc .heading {
+        font-size: 3.5rem;
+    }
+    .text_desc .subtitle{
+        font-size: 1.7rem;
+    }
+
+    .card_footer {
+        padding: 4rem 1rem;
+    }
+    .contact_button {
+        padding: 1rem 4.5rem;
+        margin-top: 0rem;
+    }
+    .contact_button a {
+        font-size: 2rem;
+    }
+    .counter {
+        font-size: 1.9rem;
+    }
+    .counter span {
+        display: block;
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (max-width: 416px){
+    .identity_card{
+        width: 32rem;
+    }
+    .text_desc .heading{
+        font-size: 3rem;
+    }
+    .text_desc .subtitle{
+        font-size: 1.4rem;
+    }
+    .social_media{
+        font-size: 3.2rem;
+    }
+
+    .card_footer{
+        padding: 4rem 1rem;
+    }
+    .contact_button{
+        padding: 1rem 4.2rem;
+        margin-top: 0rem;
+    }
+    .contact_button a{
+        font-size: 2rem;
+    }
+    .counter{
+        font-size: 1.6rem;
+    }
+    .counter span{
+        display: block;
+        font-size: 2.7rem;}
+}
